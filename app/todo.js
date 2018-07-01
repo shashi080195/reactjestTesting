@@ -21,12 +21,16 @@ export default class Todo extends React.Component {
       isVisible: true
     })
     window.addEventListener("mousemove",this.didMouseEnter);
+    window.addEventListener("scroll",this.didScreenScrolls);
   }
 
   didMouseEnter(){
     console.log("mouse has entered");
   }
 
+  didScreenScrolls(){
+    console.log("screen scrolled");
+  }
   render() {
     const { todo } = this.props;
 

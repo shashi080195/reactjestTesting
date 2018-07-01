@@ -15,6 +15,7 @@ test('TodoComponent calls doneChange when todo is clicked', () => {
   );
 
   map.mousemove({ pageX: 100, pageY: 100});
+  map.scroll();
   const p = wrapper.find('.toggle-todo');
   p.simulate('click');
   expect(doneChange).toBeCalledWith(1);
